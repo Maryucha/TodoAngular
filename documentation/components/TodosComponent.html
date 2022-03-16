@@ -1,0 +1,1287 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Todo Angular Documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+        <link rel="stylesheet" href="../styles/postmark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Todo Angular Documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  TodosComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/todos/todos.component.ts</code>
+</p>
+
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>This class represents todo components</p>
+
+    </p>
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-todos</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./todos.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./todos.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#formTodo" >formTodo</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#lista" >lista</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#tipo_template" >tipo_template</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#todoList" >todoList</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#addTodo" >addTodo</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#deleteTodo" >deleteTodo</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#resolveTodo" >resolveTodo</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#save" >save</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#sortList" >sortList</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#updateTodo" >updateTodo</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(todoService: <a href="../injectables/DataService.html" target="_self">DataService</a>, formBuilder: <a href="https://angular.io/api/forms/FormBuilder" target="_blank">FormBuilder</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/todos/todos.component.ts:20</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>todoService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/DataService.html" target="_self" >DataService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>formBuilder</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/forms/FormBuilder" target="_blank" >FormBuilder</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addTodo"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>addTodo</b></span>
+                        <a href="#addTodo"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>addTodo()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="46"
+                            class="link-to-prism">src/app/todos/todos.component.ts:46</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>This method add one todo</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deleteTodo"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span class="modifier">Async</span>
+                        <span ><b>deleteTodo</b></span>
+                        <a href="#deleteTodo"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>deleteTodo(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="84"
+                            class="link-to-prism">src/app/todos/todos.component.ts:84</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>This method remove one todo</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="30"
+                            class="link-to-prism">src/app/todos/todos.component.ts:30</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>This method get list todo and create form</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="resolveTodo"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>resolveTodo</b></span>
+                        <a href="#resolveTodo"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>resolveTodo(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="92"
+                            class="link-to-prism">src/app/todos/todos.component.ts:92</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Thise method resolve the tasks</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="save"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>save</b></span>
+                        <a href="#save"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>save(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="105"
+                            class="link-to-prism">src/app/todos/todos.component.ts:105</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>This method save one todo</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="sortList"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>sortList</b></span>
+                        <a href="#sortList"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>sortList()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="116"
+                            class="link-to-prism">src/app/todos/todos.component.ts:116</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>This method sorted list for completed param</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updateTodo"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>updateTodo</b></span>
+                        <a href="#updateTodo"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>updateTodo(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="61"
+                            class="link-to-prism">src/app/todos/todos.component.ts:61</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>This method updated todo</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="formTodo"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>formTodo</b></span>
+                        <a href="#formTodo"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/forms/FormGroup" target="_blank" >FormGroup</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/todos/todos.component.ts:17</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="lista"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>lista</b></span>
+                        <a href="#lista"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>any[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/todos/todos.component.ts:20</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="tipo_template"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>tipo_template</b></span>
+                        <a href="#tipo_template"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/todos/todos.component.ts:18</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="todoList"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>todoList</b></span>
+                        <a href="#todoList"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Observable&lt;Array&lt;any&gt;&gt; | undefined</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/todos/todos.component.ts:19</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { FormBuilder, FormControl, FormGroup, Validators } from &#x27;@angular/forms&#x27;;
+import { Observable } from &#x27;rxjs&#x27;;
+import { DataService } from &#x27;../shared/data.service&#x27;;
+import { Todo } from &#x27;../shared/todo.model&#x27;;
+
+/**
+ * This class represents todo components
+ */
+@Component({
+  selector: &#x27;app-todos&#x27;,
+  templateUrl: &#x27;./todos.component.html&#x27;,
+  styleUrls: [&#x27;./todos.component.scss&#x27;]
+})
+export class TodosComponent implements OnInit {
+
+  public formTodo!: FormGroup;
+  public tipo_template: boolean &#x3D; false;
+  public todoList: Observable&lt;Array&lt;any&gt;&gt; | undefined;
+  public lista: any[] &#x3D; [];
+
+  constructor(
+    private todoService: DataService,
+    private formBuilder: FormBuilder,
+  ) { }
+
+  /**
+   * This method get list todo and create form
+   */
+  async ngOnInit() {
+
+    this.formTodo &#x3D; this.formBuilder.group({
+      textControl: new FormControl(&#x27;&#x27;, [Validators.required]),
+      idControl: new FormControl(),
+      completedControl: new FormControl(),
+      updateControl: new FormControl()
+    })
+
+    this.todoList &#x3D; await this.todoService.getAllTodos();
+    this.sortList();
+
+  }
+  /**
+   * This method add one todo
+   */
+  public addTodo() {
+    let todoCreate: Todo &#x3D; {
+      text: this.formTodo.get(&#x27;textControl&#x27;)?.value,
+      completed: false,
+    }
+    if (this.formTodo.valid) {
+      this.todoService.addTodo(todoCreate).subscribe((a) &#x3D;&gt; { });
+      this.formTodo.reset();
+    }
+  }
+
+  /**
+   * This method updated todo
+   * @param id 
+   */
+  public updateTodo(id: string) {
+    this.tipo_template &#x3D; true;
+    this.todoService.getOne(id).subscribe((a) &#x3D;&gt; {
+      if (id &#x3D;&#x3D;&#x3D; a.id) {
+        const todo: Todo &#x3D; a;
+
+        this.formTodo.patchValue({
+          updateControl: &#x27;&#x27;,
+        })
+
+        if (this.formTodo.valid) {
+          this.save(id);
+          this.formTodo.reset();
+        }
+      }
+
+    });
+  }
+
+  /**
+   * This method remove one todo
+   * @param id 
+   */
+  public async deleteTodo(id: string) {
+    await this.todoService.deleteTodo(id).subscribe((a) &#x3D;&gt; { });
+  }
+
+  /**
+   * Thise method resolve the tasks
+   * @param id 
+   */
+  public resolveTodo(id: string) {
+    this.todoService.getOne(id).subscribe((a) &#x3D;&gt; {
+      const todo: Todo &#x3D; a;
+      todo.completed &#x3D; !a.completed;
+      todo.text &#x3D; a.text;
+      this.todoService.updateTodo(id, todo).subscribe((a) &#x3D;&gt; { });
+    });
+  }
+
+  /**
+   * This method save one todo
+   * @param id 
+   */
+  public save(id: string) {
+    let current: Todo &#x3D; {
+      text: this.formTodo.get(&#x27;updateControl&#x27;)?.value,
+      completed: this.formTodo.get(&#x27;completedControl&#x27;)?.value
+    }
+    this.todoService.updateTodo(id, current).subscribe((a) &#x3D;&gt; { });
+  }
+
+  /**
+   * This method sorted list for completed param
+   */
+  public sortList() {
+    this.todoList?.subscribe((a) &#x3D;&gt; {
+      this.lista &#x3D; a;
+      this.lista.sort(function (x, y) {
+        return (x.completed - y.completed);
+      });
+    })
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;section class&#x3D;&quot;heading-section&quot;&gt;
+    &lt;h1 class&#x3D;&quot;title is-1 has-text-centered&quot;&gt;Lista de tarefas&lt;/h1&gt;
+&lt;/section&gt;
+
+&lt;div class&#x3D;&quot;container&quot;&gt;
+    &lt;div class&#x3D;&quot;add-todo-box&quot;&gt;
+        &lt;form [formGroup]&#x3D;&quot;formTodo&quot;&gt;
+            &lt;h2 class&#x3D;&quot;title is-5&quot;&gt;Nova tarefa&lt;/h2&gt;
+            &lt;div class&#x3D;&quot;field is-grouped&quot;&gt;
+                &lt;p class&#x3D;&quot;control is-expanded&quot;&gt;
+                    &lt;input class&#x3D;&quot;input&quot; name&#x3D;&quot;text&quot; formControlName&#x3D;&quot;textControl&quot; type&#x3D;&quot;text&quot; placeholder&#x3D;&quot;Sua tarefa&quot;
+                        required&gt;
+                &lt;/p&gt;
+                &lt;p class&#x3D;&quot;control&quot;&gt;
+                    &lt;button class&#x3D;&quot;button alt-gradient-button&quot; type&#x3D;&quot;button&quot; [disabled]&#x3D;&quot;!formTodo.valid&quot;
+                        (click)&#x3D;&quot;addTodo()&quot;&gt;
+                        &lt;i class&#x3D;&quot;material-icons&quot;&gt;add&lt;/i&gt;
+                        Nova
+                    &lt;/button&gt;
+                &lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;section class&#x3D;&quot;section&quot;&gt;
+    &lt;div class&#x3D;&quot;container&quot;&gt;
+        &lt;div class&#x3D;&quot;todo-list&quot;&gt;
+            &lt;div class&#x3D;&quot;todo-item&quot; [class.completed]&#x3D;&quot;todo.completed&quot; *ngFor&#x3D;&quot;let todo of lista&quot;&gt;
+                &lt;i class&#x3D;&quot;check-box&quot; *ngIf&#x3D;&quot;todo.id&quot;(click)&#x3D;&quot;resolveTodo(todo.id)&quot;&gt;
+                    &lt;i class&#x3D;&quot;material-icons&quot;&gt;check&lt;/i&gt;
+                &lt;/i&gt;
+
+                &lt;div class&#x3D;&quot;todo-text&quot;&gt;
+                    {{todo.text}}
+
+                    &lt;ng-container *ngIf&#x3D;&quot;todo.id&quot; [formGroup]&#x3D;&quot;formTodo&quot;&gt;
+                        &lt;div class&#x3D;&quot;field is-grouped&quot; *ngIf&#x3D;&quot;tipo_template&quot;&gt;
+                            &lt;p class&#x3D;&quot;control is-expanded&quot;&gt;
+                                &lt;input class&#x3D;&quot;input&quot; name&#x3D;&quot;text&quot; formControlName&#x3D;&quot;updateControl&quot; type&#x3D;&quot;text&quot;
+                                    placeholder&#x3D;&quot;Sua tarefa&quot; required *ngIf&#x3D;&quot;!formTodo.valid&quot;&gt;
+                            &lt;/p&gt;
+                            &lt;p class&#x3D;&quot;control&quot;&gt;
+                                &lt;button class&#x3D;&quot;button alt-gradient-button&quot; type&#x3D;&quot;button&quot; [disabled]&#x3D;&quot;formTodo.valid&quot;
+                                    (click)&#x3D;&quot;save(todo.id)&quot;&gt;
+                                    &lt;i class&#x3D;&quot;material-icons&quot;&gt;save&lt;/i&gt;
+                                    Salvar
+                                &lt;/button&gt;
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/ng-container&gt;
+
+                &lt;/div&gt;
+
+                &lt;div class&#x3D;&quot;todo-control-box&quot; *ngIf&#x3D;&quot;todo.id&quot;&gt;
+                    &lt;button class&#x3D;&quot;todo-control-button&quot; (click)&#x3D;&quot;updateTodo(todo.id)&quot;&gt;
+                        &lt;i class&#x3D;&quot;material-icons&quot;&gt;edit&lt;/i&gt;
+                    &lt;/button&gt;
+                    &lt;button class&#x3D;&quot;todo-control-button&quot; (click)&#x3D;&quot;deleteTodo(todo.id)&quot;&gt;
+                        &lt;i class&#x3D;&quot;material-icons&quot;&gt;delete&lt;/i&gt;
+                    &lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/section&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./todos.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.heading-section {
+  background: linear-gradient(rgb(2, 228, 171), rgb(74, 215, 240));
+
+  padding: 100px;
+  padding-bottom: 150px;
+
+  h1.title {
+    color: whitesmoke;
+    font-weight: 700;
+    text-shadow: 0px 1px 2px rgba(black, 0.12);
+  }
+}
+
+//posição da caixa do input
+.container {
+  max-width: 800px;
+}
+
+//input caixa
+.add-todo-box {
+  padding: 25px;
+  background: white;
+  border-radius: 4px;
+  margin-top: -68px;
+  box-shadow: 0 4px 12px rgba(black, 0.08);
+
+  span i {
+    font-size: 1.5rem;
+  }
+}
+
+//lista
+.todo-item {
+  display: flex;
+  font-size: 18px;
+  align-items: center;
+  position: relative;
+  flex-shrink: 0;
+  cursor: pointer;
+  padding: 35px 15px;
+  border-bottom: 1px solid #f2f3f5;
+
+  //normal
+  .check-box {
+    border: 2px solid #eee;
+    border-radius: 50%;
+    margin-right: 20px;
+    height: 28px;
+    width: 28px;
+
+    transition: background-color 0.2s;
+
+    i.material-icons {
+      font-size: 25px;
+      margin: auto;
+      color: #333;
+      //hide by default
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+  }
+
+  //mouse sobre
+  &amp;:hover {
+    background: rgba(247, 245, 245, 0.637);
+    .check-box {
+      background: #eee;
+
+      i.material-icons {
+        opacity: 0.28;
+      }
+      opacity: 1;
+    }
+  }
+  //quando está selecionado
+  &amp;.completed {
+    border-radius: 4px;
+    color: rgb(153, 153, 153);
+    text-decoration: line-through;
+    .check-box {
+      background: rgba(11, 223, 170, 0.644);
+
+      i.material-icons {
+        color: #333;
+        opacity: 0.7;
+      }
+      opacity: 1;
+    }
+  }
+
+  //botão de ação
+  .todo-control-box {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    background: #f2f3f5;
+
+    //hide by default
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(2px);
+    transition: opacity 0.2s, visibility 0.2s, transform 0.2s;
+
+    .todo-control-button {
+      display: flex;
+      color: #505253;
+      padding: 7px 10px;
+
+      i.material-icons {
+        font-size: 20px;
+      }
+
+      //editar
+      &amp;:first-of-type {
+        color: rgb(173, 173, 173);
+        //mouse
+        &amp; :hover {
+          color: rgb(248, 170, 2);
+        }
+        &amp; :active {
+          color: rgb(65, 63, 63);
+        }
+      }
+
+      //deletar
+      &amp;:last-of-type {
+        color: rgb(173, 173, 173);
+        //mouse
+        &amp; :hover {
+          color: rgb(247, 63, 63);
+        }
+        &amp; :active {
+          color: rgb(65, 63, 63);
+        }
+      }
+    }
+  }
+}
+
+//lista selecionada botão
+.todo-item:hover {
+  .todo-control-box {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.4s;
+    transform: translateY(0);
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><section class="heading-section">    <h1 class="title is-1 has-text-centered">Lista de tarefas</h1></section><div class="container">    <div class="add-todo-box">        <form [formGroup]="formTodo">            <h2 class="title is-5">Nova tarefa</h2>            <div class="field is-grouped">                <p class="control is-expanded">                    <input class="input" name="text" formControlName="textControl" type="text" placeholder="Sua tarefa"                        required>                </p>                <p class="control">                    <button class="button alt-gradient-button" type="button" [disabled]="!formTodo.valid"                        (click)="addTodo()">                        <i class="material-icons">add</i>                        Nova                    </button>                </p>            </div>        </form>    </div></div><section class="section">    <div class="container">        <div class="todo-list">            <div class="todo-item" [class.completed]="todo.completed" *ngFor="let todo of lista">                <i class="check-box" *ngIf="todo.id"(click)="resolveTodo(todo.id)">                    <i class="material-icons">check</i>                </i>                <div class="todo-text">                    {{todo.text}}                    <ng-container *ngIf="todo.id" [formGroup]="formTodo">                        <div class="field is-grouped" *ngIf="tipo_template">                            <p class="control is-expanded">                                <input class="input" name="text" formControlName="updateControl" type="text"                                    placeholder="Sua tarefa" required *ngIf="!formTodo.valid">                            </p>                            <p class="control">                                <button class="button alt-gradient-button" type="button" [disabled]="formTodo.valid"                                    (click)="save(todo.id)">                                    <i class="material-icons">save</i>                                    Salvar                                </button>                            </p>                        </div>                    </ng-container>                </div>                <div class="todo-control-box" *ngIf="todo.id">                    <button class="todo-control-button" (click)="updateTodo(todo.id)">                        <i class="material-icons">edit</i>                    </button>                    <button class="todo-control-button" (click)="deleteTodo(todo.id)">                        <i class="material-icons">delete</i>                    </button>                </div>            </div>        </div>    </div></section></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'TodosComponent', 'selector': 'app-todos'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'TodosComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'TodosComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

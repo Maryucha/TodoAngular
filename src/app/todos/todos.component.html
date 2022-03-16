@@ -1,0 +1,66 @@
+<section class="heading-section">
+    <h1 class="title is-1 has-text-centered">Lista de tarefas</h1>
+</section>
+
+<div class="container">
+    <div class="add-todo-box">
+        <form [formGroup]="formTodo">
+            <h2 class="title is-5">Nova tarefa</h2>
+            <div class="field is-grouped">
+                <p class="control is-expanded">
+                    <input class="input" name="text" formControlName="textControl" type="text" placeholder="Sua tarefa"
+                        required>
+                </p>
+                <p class="control">
+                    <button class="button alt-gradient-button" type="button" [disabled]="!formTodo.valid"
+                        (click)="addTodo()">
+                        <i class="material-icons">add</i>
+                        Nova
+                    </button>
+                </p>
+            </div>
+        </form>
+    </div>
+</div>
+
+<section class="section">
+    <div class="container">
+        <div class="todo-list">
+            <div class="todo-item" [class.completed]="todo.completed" *ngFor="let todo of lista">
+                <i class="check-box" *ngIf="todo.id"(click)="resolveTodo(todo.id)">
+                    <i class="material-icons">check</i>
+                </i>
+
+                <div class="todo-text">
+                    {{todo.text}}
+
+                    <ng-container *ngIf="todo.id" [formGroup]="formTodo">
+                        <div class="field is-grouped" *ngIf="tipo_template">
+                            <p class="control is-expanded">
+                                <input class="input" name="text" formControlName="updateControl" type="text"
+                                    placeholder="Sua tarefa" required *ngIf="!formTodo.valid">
+                            </p>
+                            <p class="control">
+                                <button class="button alt-gradient-button" type="button" [disabled]="formTodo.valid"
+                                    (click)="save(todo.id)">
+                                    <i class="material-icons">save</i>
+                                    Salvar
+                                </button>
+                            </p>
+                        </div>
+                    </ng-container>
+
+                </div>
+
+                <div class="todo-control-box" *ngIf="todo.id">
+                    <button class="todo-control-button" (click)="updateTodo(todo.id)">
+                        <i class="material-icons">edit</i>
+                    </button>
+                    <button class="todo-control-button" (click)="deleteTodo(todo.id)">
+                        <i class="material-icons">delete</i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
