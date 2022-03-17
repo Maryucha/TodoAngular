@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { Observable } from 'rxjs';
+import { MatDialog } from '@angular/material/dialog';
+import { Observable } from 'rxjs/internal/Observable';
+import { EditModalComponent } from '../edit-modal/edit-modal.component';
 import { DataService } from '../shared/data.service';
 import { Todo } from '../shared/todo.model';
 
@@ -15,121 +17,100 @@ import { Todo } from '../shared/todo.model';
 export class TodosComponent implements OnInit {
 
   public formTodo!: FormGroup;
-  public tipo_template: boolean = false;
   public todoList: Observable<Array<any>> | undefined;
   public lista: any[] = [];
-  public edit: boolean = false;
-  public selected: boolean = false;
 
+  /**
+   * This is the constructor of todoComponent
+   * @param todoService 
+   * @param formBuilder 
+   * @param dialog 
+   */
   constructor(
     private todoService: DataService,
     private formBuilder: FormBuilder,
+    private dialog: MatDialog
   ) { }
 
   /**
-   * This method get list todo and create form
+   * This method is responsable for init this component
    */
-  async ngOnInit() {
-
+  async ngOnInit(): Promise<void> {
     this.formTodo = this.formBuilder.group({
-      textControl: new FormControl('', [Validators.required]),
+      textControl: new FormControl('', [Validators.required, Validators.minLength(4)]),
       idControl: new FormControl(),
       completedControl: new FormControl(),
       updateControl: new FormControl(),
-    })
+    });
 
     this.todoList = await this.todoService.getAllTodos();
     this.sortList();
-
   }
+
   /**
-   * This method add one todo
+   * This method is called for resolved todo
+   * @param todo 
    */
+  toggleCompleted(id: string, todo: Todo) {
+    todo.completed = !todo.completed;
+    this.todoService.getOne(id).subscribe((a) => {
+      todo =  a;
+      todo.completed = !a.completed;
+      todo.text = a.text;
+      this.todoService.updateTodo(id, todo).subscribe((a) => {
+        this.sortList();
+      });
+    });
+  }
+
+  /**
+  * This method add one todo
+  */
   public addTodo() {
     let todoCreate: Todo = {
       text: this.formTodo.get('textControl')?.value,
       completed: false,
     }
     if (this.formTodo.valid) {
-      this.todoService.addTodo(todoCreate).subscribe((a) => { 
+      this.todoService.addTodo(todoCreate).subscribe((a) => {
         this.sortList();
       });
       this.formTodo.reset();
-      
     }
   }
 
   /**
-   * This method updated todo
-   * @param id 
+   * This method is called for edited todo
+   * @param todo 
    */
-  public updateTodo(id: string) {
-    this.tipo_template = true;
-    this.todoService.getOne(id).subscribe((a) => {
-
-      if (this.selected === false) {
-        const todo: Todo = a;
-        //abre o input
-        this.edit = true;
-        this.selected = true;
-        this.formTodo.patchValue({
-          updateControl: '',
-        })
-        //a.selected = true;
-        if (this.formTodo.valid) {
-          this.save(id);
-          this.formTodo.reset();
-          this.edit = false;
-        }
-      }
-      this.sortList();
-    });
-  }
-
-    /**
-   * This method save one todo
-   * @param id 
-   */
-     public save(id: string) {
-      let current: Todo = {
-        text: this.formTodo.get('updateControl')?.value,
-      }
-      this.todoService.updateTodo(id, current).subscribe((a) => {
-        current=a
-        
-        this.sortList();
-       });
-    }
-
-  /**
-   * This method remove one todo
-   * @param id 
-   */
-  public async deleteTodo(id: string) {
-    await this.todoService.deleteTodo(id).subscribe((a) => { 
-      this.sortList();
-    });    
-  }
-
-  /**
-   * Thise method resolve the tasks
-   * @param id 
-   */
-  public resolveTodo(id: string) {
-    this.todoService.getOne(id).subscribe((a) => {
-      const todo: Todo = a;
-      todo.completed = !a.completed;
-      todo.text = a.text;
-      this.todoService.updateTodo(id, todo).subscribe((a) => { 
+  public editTodo(todo: Todo) {
+    let dialoRef = this.dialog.open(EditModalComponent, {
+      height: '200px', width: '600px',
+      data: todo
+    })
+    dialoRef.afterClosed().subscribe((a) => {
+      todo = a;
+      this.todoService.updateTodo(a.id, todo).subscribe((a) => {
         this.sortList();
       });
-      
     });
   }
 
   /**
-   * This method sorted list for completed param
+   * This method remove todo at list
+   * @param id 
    */
+  public deleteTodo(id: string) {
+    this.todoService.getOne(id).subscribe((a) => {
+      this.todoService.deleteTodo(id).subscribe(() => {
+        this.sortList();
+      });
+    });
+  }
+
+  /**
+  * This method sorted list for completed param
+  */
   public sortList() {
     this.todoList?.subscribe((a) => {
       this.lista = a;

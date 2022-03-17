@@ -5,5 +5,5 @@
       "types": []
     },
     "include": ["src/**/*.ts"],
-    "exclude": ["src/test.ts", "src/**/*.spec.ts", "src/app/file-to-exclude.ts","/home/uxa/Estudos/todoList/src/environments/*.environment.ts"]
+    "exclude": ["src/test.ts", "src/**/*.spec.ts", "src/app/file-to-exclude.ts"]
   }

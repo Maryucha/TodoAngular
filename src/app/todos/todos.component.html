@@ -6,7 +6,7 @@
     <div class="add-todo-box">
         <form [formGroup]="formTodo">
             <h2 class="title is-5">Nova tarefa</h2>
-            <div class="field is-grouped">
+            <div class="field is-grouped my-0">
                 <p class="control is-expanded">
                     <input class="input" name="text" formControlName="textControl" type="text" placeholder="Sua tarefa"
                         required>
@@ -19,6 +19,11 @@
                     </button>
                 </p>
             </div>
+            <div *ngIf="formTodo.valid">
+                <p class="help is-danger" *ngIf="!! formTodo.get('textControl')?.errors?.['required']">Adicione sua
+                    tarefa.</p>
+            </div>
+
         </form>
     </div>
 </div>
@@ -26,41 +31,8 @@
 <section class="section">
     <div class="container">
         <div class="todo-list">
-            <div class="todo-item" [class.completed]="todo.completed" *ngFor="let todo of lista">
-                <i class="check-box" *ngIf="todo.id" (click)="resolveTodo(todo.id)">
-                    <i class="material-icons">check</i>
-                </i>
-
-                <div class="todo-text">
-                    {{todo.text}}
-                </div>
-
-                <div class="todo-control-box" *ngIf="todo.id">
-                    <i class="todo-control-button" (click)="updateTodo(todo.id)">
-                        <i class="material-icons">edit</i>
-                    </i>
-                    <i class="todo-control-button" (click)="deleteTodo(todo.id)">
-                        <i class="material-icons">delete</i>
-                    </i>
-                </div>
-
-                <ng-container *ngIf="todo.id && edit" [formGroup]="formTodo">
-                    <div class="field is-grouped" *ngIf="selected">
-                        <p class="control is-expanded">
-                            <input class="input" name="text" formControlName="updateControl" type="text"
-                                placeholder="Sua tarefa" required *ngIf="tipo_template">
-                        </p>
-                        <p class="control" *ngIf="tipo_template">
-                            <button class="button alt-gradient-button" type="submit" [disabled]="formTodo.valid"
-                                (click)="save(todo.id)">
-                                <i class="material-icons">save</i>
-                                Salvar
-                            </button>
-                        </p>
-                    </div>
-                </ng-container>
-                
-            </div>
+            <app-todo-item *ngFor="let todo of lista" [todo]="todo" (todoClicked)="toggleCompleted(todo.id,todo)"
+                (editClicked)="editTodo(todo)" (removeClicked)="deleteTodo(todo.id)"></app-todo-item>
         </div>
     </div>
 </section>

@@ -1,0 +1,28 @@
+<h1 class="title">Editar Tarefa</h1>
+
+<mat-dialog-content>
+    <form [formGroup]="editFormTodo">
+        <div class="field is-grouped my-0">
+            <p class="control is-expanded">
+                <input class="input" name="text" formControlName="textControl" type="text" placeholder="Sua tarefa"
+                    required>
+            </p>
+        </div>
+        <div *ngIf="!editFormTodo.valid">
+            <p class="help is-danger" *ngIf="!! editFormTodo.get('textControl')?.errors?.['required']">Adicione sua
+                tarefa.</p>
+        </div>
+    </form>
+</mat-dialog-content>
+
+<mat-dialog-actions class=" field is-grouped is-grouped-right">
+    <div class="control">
+        <button class="button" type="button" matDialogClose>Cancelar</button>
+    </div>
+    <div class="control">
+        <button class="button alt-gradient-button" type="submit" [disabled]="!editFormTodo.valid" (click)="onSubmit()">
+            <i class="material-icons">save</i>
+            Salvar
+        </button>
+    </div>
+</mat-dialog-actions>
