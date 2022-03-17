@@ -5,7 +5,7 @@
   "license": "MIT",
   "author": "Maryucha M. Mariani",
   "description": "This app is a  Todo List for my pratics in Angular",
-  "repository": "my repository",
+  "repository": "https://github.com/Maryucha/TodoAngular",
   "scripts": {
     "ng": "ng",
     "start": "ng serve --open",

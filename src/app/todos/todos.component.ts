@@ -18,6 +18,8 @@ export class TodosComponent implements OnInit {
   public tipo_template: boolean = false;
   public todoList: Observable<Array<any>> | undefined;
   public lista: any[] = [];
+  public edit: boolean = false;
+  public selected: boolean = false;
 
   constructor(
     private todoService: DataService,
@@ -33,7 +35,7 @@ export class TodosComponent implements OnInit {
       textControl: new FormControl('', [Validators.required]),
       idControl: new FormControl(),
       completedControl: new FormControl(),
-      updateControl: new FormControl()
+      updateControl: new FormControl(),
     })
 
     this.todoList = await this.todoService.getAllTodos();
@@ -49,8 +51,11 @@ export class TodosComponent implements OnInit {
       completed: false,
     }
     if (this.formTodo.valid) {
-      this.todoService.addTodo(todoCreate).subscribe((a) => { });
+      this.todoService.addTodo(todoCreate).subscribe((a) => { 
+        this.sortList();
+      });
       this.formTodo.reset();
+      
     }
   }
 
@@ -61,28 +66,49 @@ export class TodosComponent implements OnInit {
   public updateTodo(id: string) {
     this.tipo_template = true;
     this.todoService.getOne(id).subscribe((a) => {
-      if (id === a.id) {
-        const todo: Todo = a;
 
+      if (this.selected === false) {
+        const todo: Todo = a;
+        //abre o input
+        this.edit = true;
+        this.selected = true;
         this.formTodo.patchValue({
           updateControl: '',
         })
-
+        //a.selected = true;
         if (this.formTodo.valid) {
           this.save(id);
           this.formTodo.reset();
+          this.edit = false;
         }
       }
-
+      this.sortList();
     });
   }
+
+    /**
+   * This method save one todo
+   * @param id 
+   */
+     public save(id: string) {
+      let current: Todo = {
+        text: this.formTodo.get('updateControl')?.value,
+      }
+      this.todoService.updateTodo(id, current).subscribe((a) => {
+        current=a
+        
+        this.sortList();
+       });
+    }
 
   /**
    * This method remove one todo
    * @param id 
    */
   public async deleteTodo(id: string) {
-    await this.todoService.deleteTodo(id).subscribe((a) => { });
+    await this.todoService.deleteTodo(id).subscribe((a) => { 
+      this.sortList();
+    });    
   }
 
   /**
@@ -94,20 +120,11 @@ export class TodosComponent implements OnInit {
       const todo: Todo = a;
       todo.completed = !a.completed;
       todo.text = a.text;
-      this.todoService.updateTodo(id, todo).subscribe((a) => { });
+      this.todoService.updateTodo(id, todo).subscribe((a) => { 
+        this.sortList();
+      });
+      
     });
-  }
-
-  /**
-   * This method save one todo
-   * @param id 
-   */
-  public save(id: string) {
-    let current: Todo = {
-      text: this.formTodo.get('updateControl')?.value,
-      completed: this.formTodo.get('completedControl')?.value
-    }
-    this.todoService.updateTodo(id, current).subscribe((a) => { });
   }
 
   /**
